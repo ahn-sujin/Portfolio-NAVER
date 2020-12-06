@@ -226,7 +226,7 @@ width:100%; height:100%;
 
 
 /*----icon_banner------------------------------------------------------------*/
-#icon_banner{width:100%; height:500px; margin-top:100px; background: url(../img/icon_banner.jpg) no-repeat center; background-size: cover;}
+#icon_banner{width:100%; height:500px; margin:100px 0; background: url(../img/icon_banner.jpg) no-repeat center; background-size: cover;}
 
 #icon_banner .msg_box{float:left; padding:100px 0;}
 #icon_banner .msg_box .title{
@@ -305,9 +305,9 @@ width:100%; height:100%;
 #tab_menu .menu{width:100%; height:300px;}
 #tab_menu .tab_pannel{
     position: relative; float: right; width: calc(100% - 180px); height: 100%; 
-    opacity: 0; transform: translateY(-50%); transition: 1s;
+    opacity: 0; transform: translateX(50%); transition: 1s;
 }
-#tab_menu.on .tab_pannel{opacity: 1; transform: translateY(0%); }
+#tab_menu.on .tab_pannel{opacity: 1; transform: translateX(0%); }
 #tab_menu .tab_pannel > li{display: none; position: absolute; width: 100%; height: 100%; padding: 40px 60px;}
 
 
@@ -320,8 +320,12 @@ width:100%; height:100%;
 #tab_menu .tab_pannel > li > .msg_box .title{font-size:18px; font-weight: bold; margin-bottom: 24px; opacity:0;}
 #tab_menu .tab_pannel > li > .msg_box .txt{font-size: 14px; color: #777; line-height: 20px; opacity:0;}
 #tab_menu .tab_pannel > li > .msg_box .date{font-size: 14px; color: #777; margin-top: 20px; opacity:0;}
-#tab_menu .tab_pannel > li > .msg_box .more{float: left; width: 120px; height:40px; border: 1px solid #36ac37;  color: #36ac37;  margin-top: 50px; opacity:0;}
-#tab_menu .tab_pannel > li > .msg_box .more_media{float:right;  width: 120px; height:40px; border: 1px solid #36ac37;  color: #36ac37;  margin-top: 50px; opacity:0;}
+#tab_menu .tab_pannel > li > .msg_box .more{float: left; width: 120px; height:40px; border: 1px solid #36ac37;  color: #36ac37;  margin-top: 50px; cursor: pointer; opacity:0;}
+#tab_menu .tab_pannel > li > .msg_box .more_media{float:right;  width: 120px; height:40px; border: 1px solid #36ac37;  color: #36ac37;  margin-top: 50px; cursor: pointer; opacity:0;}
+#tab_menu .tab_pannel > li > .msg_box .more:hover,
+#tab_menu .tab_pannel > li > .msg_box .more_media:hover{background: #36ac37; color: #fff;}
+
+
 
 #tab_menu .tab_pannel > li.on > .pic_box{opacity:1; transform: translateX(0%); transition: 0.5s 0s;}
 #tab_menu .tab_pannel > li.on > .msg_box .bar {opacity:1;  transition: 0.3s 0s; }
@@ -381,14 +385,14 @@ width:100%; height:100%;
 }
 
 /*----notice--------------------------------------------------------------------*/
-#notice{background: #f9f5f4;}
+#notice{background: #f9f5f4; margin: 100px 0;}
 #notice .title{text-align: center; font-size:24px; color: #36ac37; font-weight: bold; margin-bottom: 15px ;}
 #notice .txt{text-align: center; font-size: 15px; color: #777; margin-bottom: 55px;}
 
 #notice .box{
     width:376px; height:225px; border-radius: 30px; background: #fff; padding:30px;
     box-shadow: 0 0px 0px #fff, 0 -1px 1px #eee, inset 0 -1px 5px rgba(0,0,0,0.2), inset 0 1px 1px rgba(0,0,0,0); 
-    opacity: 0; transform: translateY(-100%); transition:0.5s;
+    opacity: 0; transform: translateY(100%); transition:0.5s;
 }
 #notice.on .box:nth-of-type(1){opacity: 1; transform: translateY(0%); transition-delay:0s; }
 #notice.on .box:nth-of-type(2){opacity: 1; transform: translateY(0%); transition-delay:0.2s; }
@@ -398,8 +402,8 @@ width:100%; height:100%;
 #notice .box .box_title{font-size:14px; font-weight: bold; color:#36ac37; margin-bottom: 28px;}
 #notice .box .box_sub{font-size:16px; margin-bottom: 20px;}
 #notice .box .box_txt{font-size: 13px; color: #777;}
-#notice .box .more{float:right; width:70px; height:25px; border: 1px solid #36ac37; margin-top: 30px;  color: #36ac37; transition: 0.5s;}
-#notice .box .more:hover{background: #36ac37; color: #fff;}
+#notice .box .more{float:right; width:70px; height:25px; border: 1px solid #36ac37; margin-top: 30px;  color: #36ac37; cursor: pointer;}
+#notice .box .more:hover{background: #36ac37; color: #fff; }
 
 #notice .box .number_box{width:100%; height:50px; border-bottom: 1px solid black;}
 #notice .box .number_box .price{float:left; font-size: 30px; font-weight: bold;}
@@ -407,8 +411,6 @@ width:100%; height:100%;
 #notice .box .number_box .down>li{float:left;}
 #notice .box .number_box .down>li:first-of-type{margin-right: 10px; color:#00479d }
 #notice .box .price_txt{float:left; font-size: 13px; margin-top: 13px; color: #777;}
-
-
 
 @media screen and (max-width:1200px){
     #notice .box{width:31%; height:250px;}
@@ -423,6 +425,90 @@ width:100%; height:100%;
     #notice .box{width:100%;}
 }
 
+/*----clova--------------------------------------------------------*/
+#clova .inner{position: relative; height:850px;}
+#clova .product .pic{float:left; position: relative; width:45%; padding:40px 0 60px; background: #f5f5f5;}
+#clova .product .pic .swiper-slide img{display: block; width:100%; margin: 0 auto;}
+#clova .product .pic .swiper-slide .name{text-align: center;}
+
+#clova .product .msg{float:right; width:50%; padding:40px 0;}
+#clova .product .msg .title{
+    font-size:50px; color: #444; font-weight: bold; margin-bottom: 20px;
+    opacity: 0; transform: translateX(100%); transition: 0.5s 0s;
+}
+#clova .product .msg .sub_title{font-size:20px; color: #444; padding:30px 0; border-bottom: 1px solid #ddd; cursor: pointer;}
+#clova .product .msg .sub_title::before{
+    content: '\f138'; font-family: 'Font Awesome 5 Free'; font-weight: 900; font-size:25px; color:#36ac37 ; margin-right:20px; cursor: pointer;
+    display: inline-block; transform: rotate(0deg); transition: 0.3s;
+}
+#clova .product .msg .sub_title:hover::before{transform: rotate(90deg);}
+#clova .product .msg .txt{display: none; font-size:15px; line-height: 24px; color: #777; padding: 20px 40px 0;}
+#clova .product .msg .txt.on{display: block;}
+
+#clova .product .msg .clova_intro_01 .sub_title{opacity: 0; transform: translateX(100%); transition: 0.6s 0.2s;}
+#clova .product .msg .clova_intro_02 .sub_title{opacity: 0; transform: translateX(100%); transition: 0.6s 0.4s;}
+#clova .product .msg .clova_intro_03 .sub_title{opacity: 0; transform: translateX(100%); transition: 0.6s 0.6s;}
+
+#clova.on .product .msg .title{opacity: 1; transform: translateX(0);}
+#clova.on .product .msg .clova_intro_01 .sub_title{opacity: 1; transform: translateX(0);}
+#clova.on .product .msg .clova_intro_02 .sub_title{opacity: 1; transform: translateX(0);}
+#clova.on .product .msg .clova_intro_03 .sub_title{opacity: 1; transform: translateX(0);}
+
+#clova .intro{position: absolute; left:0; bottom:0%; ; }
+#clova .intro .box{float:left; width:31.3%; height:144px; margin-right:3%; padding:35px 20px; background: #fff; border:1px solid #eee;}
+#clova .intro .box:last-of-type{margin-right: 0;}
+#clova .intro .box .icon{float:left; font-size:30px; color: #36ac37; padding:17px ; }
+#clova .intro .box .icon_text{float:right; width:70%;}
+#clova .intro .box .icon_text .client_title{font-weight: bold; color: #444; margin-bottom:10px; cursor: pointer;}
+#clova .intro .box .icon_text .client_title:hover{color: #36ac37;}
+#clova .intro .box .icon_text .client_txt{font-size:14px; line-height: 20px; color: #777;}
+
+#clova .intro .box:nth-of-type(1){opacity: 0; transform: translateX(-100%); transition: 0.6s 0.6s;}
+#clova .intro .box:nth-of-type(2){opacity: 0; transform: translateX(-100%); transition: 0.6s 0.8s;}
+#clova .intro .box:nth-of-type(3){opacity: 0; transform: translateX(-100%); transition: 0.6s 1.0s;}
+
+#clova.on .intro .box:nth-of-type(1){opacity: 1; transform: translateX(0);}
+#clova.on .intro .box:nth-of-type(2){opacity: 1; transform: translateX(0);}
+#clova.on .intro .box:nth-of-type(3){opacity: 1; transform: translateX(0);}
+
+@media screen and (max-width:1024px){
+    #clova .inner{ height:800px;}
+    #clova .product .msg .title{font-size:45px;}
+    #clova .intro .box{height:200px;}
+    #clova .intro .box .icon{padding:0 17px 17px;}
+    #clova .intro .box .icon_text{float:right; width:100%; padding:0 17px;}
+}
+
+@media screen and (max-width:980px){
+    #clova .product .msg .title{font-size:35px;}
+    #clova .product .msg .sub_title{font-size:18px;}
+}
+
+@media screen and (max-width:768px){
+    #clova .inner{ height:850px;}
+    #clova .product .pic{width:37%;}
+    #clova .product .msg{float:right; width:57%; padding:40px 0;} 
+    #clova .product .msg .title{font-size:30px;}
+    #clova .product .msg .sub_title{font-size:16px; padding:20px 0;}
+    #clova .product .msg .txt{font-size:13px; line-height: 20px;}
+
+    #clova .intro .box .icon_text{ width:100%;}
+
+    #clova .intro .box{width:48.5%; margin-bottom:3%;}
+    #clova .intro .box:nth-of-type(2){margin-right: 0;}
+}
+
+@media screen and (max-width:640px){
+    #clova .inner{ height:1500px;}
+    #clova .product .pic{width:100%;}
+    #clova .product .msg{width:100%; padding:40px 0;} 
+}
+
+@media screen and (max-width:480px){
+    #clova .intro{bottom:5%;}
+    #clova .intro .box{width:100%; height:180px;}
+}
+
 /*----career_banner--------------------------------------------------------*/
 #career_banner{
     width:100%; height:500px; margin:100px 0; background: url(../img/career_banner.jpg) no-repeat center; background-size: cover;
@@ -434,36 +520,22 @@ width:100%; height:100%;
 #career_banner span{display: block; transform: translateY(-100px); }
 #career_banner .title span{ transition: 0.5s 0s;}
 #career_banner .txt span{ transition: 0.5s 0.3s;}
-#career_banner .more{display: block; width:150px; height:40px; margin: 0 auto; border: 1px solid #36ac37; color: #36ac37; opacity: 0; transition: 0.5s 0.6s;
+#career_banner .more{display: block; width:150px; height:40px; margin: 0 auto; border: 1px solid #36ac37; color: #36ac37; cursor: pointer; opacity: 0; transition: 0.5s 0.6s;
 }
-#career_banner .more:hover{background: #36ac37; color: #fff;}
-
+#career_banner .more:hover{background: #36ac37; color: #fff; }
 
 #career_banner.on span{transform: translateY(0px);}
 #career_banner.on .more{opacity: 1;}
-
-
-@media screen and (max-width:1200px){
-
-}
 
 @media screen and (max-width:980px){
     #career_banner .txt{font-size: 28px;margin-bottom:25px;}
     #career_banner .more{left:40%; top:160px;}
 }
 
-@media screen and (max-width:768px){
-
-}
-
 @media screen and (max-width:640px){
     #career_banner .title{margin:100px 0 40px;}
     #career_banner .txt{font-size: 20px; margin-bottom: 30px;}
     #career_banner .more{left:35%; top:142px; }
-}
-
-@media screen and (max-width:480px){
-
 }
 
 
@@ -541,3 +613,35 @@ width:100%; height:100%;
    #footer .bottom .footer_menu>ul>li{margin:15px 15px 0 0 ;}
     #footer .bottom .footer_menu>ul>li>a{font-size: 11px;}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

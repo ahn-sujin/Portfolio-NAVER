@@ -119,9 +119,24 @@ $(function(){
 
         $('.tab_menu>li').first().trigger('click')
 
+
+
+/*---------clova------------------------------------------------------*/
+        var mySwiper = new Swiper('#clova .swiper-container', {
+            loop: true,
+            pagination: {
+              el: '#clova .swiper-pagination',
+            },
+
+        });
+
+        $('#clova .msg .sub_title').off('click');
+        $('#clova .msg .sub_title').on('click',function(){
+            $('#clova .product .msg .txt').stop().slideUp();
+            $(this).siblings('.txt').stop().slideToggle();
+        });
         
 
-    
     
 /*---------scroll motion------------------------------------------------------*/
         var last = 0;
