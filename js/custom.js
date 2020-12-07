@@ -64,9 +64,12 @@ $(function(){
             nextEl: '#visual .swiper-button-next',
             prevEl: '#visual .swiper-button-prev',
           },
+          autoplay: {
+            delay: 3000,
+          }, 
 
     });
-/*---------visual_slide------------------------------------------------------*/     
+   
 
 
 /*---------sevices_swiper------------------------------------------------------*/   
